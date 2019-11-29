@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h3>Hello Cerebry</h3>
+<h4>Scale<h4>
+1 Unit = 30 pixels <br>
+O denotes Origin <br>
+#note: My end semester exams are going on so being short of time this is the best i could come up with 😔.Thank You 
+<p>Enter coordinates:</p>
+<label>Ax: <input type="text" id="ax" size="3" ></label>
+<label>Ay: <input type="text" id="ay" size="3" ></label>
+<label>Bx: <input type="text" id="bx" size="3" ></label>
+<label>By: <input type="text" id="by" size="3" ></label>
+<label>Cx: <input type="text" id="cx" size="3" ></label>
+<label>Cy: <input type="text" id="cy" size="3" ></label>
+<label>Dx: <input type="text" id="dx" size="3" ></label>
+<label>Dy: <input type="text" id="dy" size="3" ></label>
+
+<button onclick="myFunction()">Draw Trapezium</button>
+
+<canvas id="myCanvas" width="3000" height="1500" style="border:1px solid #d3d3d3;">
+Canvas Js</canvas>
+
+<script>
+
+
+function  myFunction(){
+
+  
+  
+  
+  
+  var ax = document.getElementById("ax").value;
+  var ay = document.getElementById("ay").value;
+  var bx = document.getElementById("bx").value;
+  var by = document.getElementById("by").value;
+  var cx = document.getElementById("cx").value;
+  var cy = document.getElementById("cy").value;
+  var dx = document.getElementById("dx").value;
+  var dy = document.getElementById("dy").value;
+  var c = document.getElementById("myCanvas");
+  var ctx = c.getContext("2d");
+
+
+
+
+ctx.translate(250,250);
+ctx.beginPath();
+ctx.moveTo(ax*30,-ay*30);
+ctx.lineTo(bx*30,-by*30);
+ctx.lineTo(cx*30,-cy*30);
+ctx.lineTo(dx*30,-dy*30);
+ctx.closePath();
+ctx.stroke();
+ctx.font = "20px Arial";
+ctx.fillText("A",((ax*30)-5),((-ay*30)-5));
+ctx.fillText("B",((bx*30)-5),((-by*30)-5));
+ctx.fillText("C",((cx*30)-5),((-cy*30)-5));
+ctx.fillText("D",((dx*30)-5),((-dy*30)-5));
+ctx.fillText(".O",3,4);
+
+		
+	
+    
+
+  
+  }
+  
+  
+  
+  
+  
+  
+
+</script>
+
+<p><strong>Note:</strong> The canvas tag is not supported in Internet 
+Explorer 8 and earlier versions.</p>
+
+</body>
+</html>
